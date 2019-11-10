@@ -1,14 +1,30 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
 }
 
+.flex-bar {
+  display: flex;
+}
+
+.link {
+  margin: 1em;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: white;
+}
+
+.link:hover {
+  color: red;
+}
 .App-logo {
   height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

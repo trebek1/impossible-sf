@@ -1,15 +1,28 @@
 import React from "react";
-import vegan from "./vegan.jpg";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "./App.css";
+import Home from "./Home";
+import About from "./About";
 
 const App: React.FC = () => (
   <div className="App">
     <header className="App-header">
-      <img src={vegan} className="App-logo" alt="logo" />
-      <p>
-        Living in SF and Looking for Vegan options downtown has always been
-        difficult. Thus, this site was born.
-      </p>
+      <Router>
+        <Router>
+          <div className="flex-bar">
+            <Link className="link" to="/">
+              Home
+            </Link>
+            <Link className="link" to="/about">
+              About
+            </Link>
+          </div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </Router>
+      </Router>
     </header>
   </div>
 );
